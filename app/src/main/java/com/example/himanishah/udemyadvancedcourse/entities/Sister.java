@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by dhruvinpatel on 8/19/17.
+ * Created by himanishah on 8/19/17.
  */
 
 public class Sister implements Parcelable {

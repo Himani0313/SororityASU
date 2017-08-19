@@ -15,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by dhruvinpatel on 8/19/17.
+ * Created by himanishah on 8/19/17.
  */
 
 public class MeetASisViewHolder extends RecyclerView.ViewHolder {
@@ -30,6 +30,7 @@ public class MeetASisViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this,itemView);
     }
     public void populate (Context context, Sister sister){
+        itemView.setTag(sister);
         Picasso.with(context).load(sister.getSisterPic())
                 .fit()
                 .centerCrop()
