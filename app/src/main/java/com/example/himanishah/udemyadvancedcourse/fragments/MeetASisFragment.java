@@ -12,15 +12,15 @@ import com.example.himanishah.udemyadvancedcourse.R;
  * Created by himanishah on 8/19/17.
  */
 
-public class MeetABroFragment extends Fragment {
-    public  static MeetABroFragment newInstance(){
-        return new MeetABroFragment();
+public class MeetASisFragment extends Fragment {
+    public  static MeetASisFragment newInstance(){
+        return new MeetASisFragment();
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_meet_a_bro,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_meet_a_sis,container,false);
         return rootView;
     }
 }

@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.himanishah.udemyadvancedcourse.fragments.AboutUsFragment;
-import com.example.himanishah.udemyadvancedcourse.fragments.MeetABroFragment;
+import com.example.himanishah.udemyadvancedcourse.fragments.MeetASisFragment;
 import com.example.himanishah.udemyadvancedcourse.fragments.RushFragment;
 
 /**
@@ -26,7 +26,7 @@ public class MainActivityViewPagerAdapter extends FragmentStatePagerAdapter{
                 returnFragment = AboutUsFragment.newInstance();
                 break;
             case 1:
-                returnFragment = MeetABroFragment.newInstance();
+                returnFragment = MeetASisFragment.newInstance();
                 break;
             case 2:
                 returnFragment = RushFragment.newInstance();
@@ -50,7 +50,7 @@ public class MainActivityViewPagerAdapter extends FragmentStatePagerAdapter{
                 title = "About us";
                 break;
             case 1:
-                title = "Meet A Bro";
+                title = "Meet A Sis";
                 break;
             case 2:
                 title = "Rush";
