@@ -12,7 +12,7 @@ import com.example.himanishah.udemyadvancedcourse.R;
  * Created by himanishah on 8/19/17.
  */
 
-public class RushFragment extends Fragment {
+public class RushFragment extends BaseFragment {
     public  static RushFragment newInstance(){
         return new RushFragment();
     }

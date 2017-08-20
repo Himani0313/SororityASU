@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.himanishah.udemyadvancedcourse.R;
+import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.Sister;
 import com.example.himanishah.udemyadvancedcourse.views.MeetASisViews.MeetASisAdapter;
 
@@ -20,7 +21,7 @@ import java.util.ArrayList;
  * Created by himanishah on 8/19/17.
  */
 
-public class MeetASisFragment extends Fragment implements MeetASisAdapter.OnSisterClicked {
+public class MeetASisFragment extends BaseFragment implements MeetASisAdapter.OnSisterClicked {
 
     private final String LOG_TAG = MeetASisFragment.class.getSimpleName();
     private MeetASisAdapter aSisAdapter;
@@ -35,7 +36,7 @@ public class MeetASisFragment extends Fragment implements MeetASisAdapter.OnSist
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_meet_a_sis,container,false);
-        aSisAdapter = new MeetASisAdapter((AppCompatActivity) getActivity(), this);
+        aSisAdapter = new MeetASisAdapter((BaseActivity) getActivity(), this);
         sisters = aSisAdapter.getSisters();
         recyclerView = (RecyclerView) rootView.findViewById(R.id.fragment_meet_a_sis_recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),4));

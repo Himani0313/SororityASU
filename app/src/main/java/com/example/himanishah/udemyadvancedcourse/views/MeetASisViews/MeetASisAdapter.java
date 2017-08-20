@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.himanishah.udemyadvancedcourse.R;
+import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.Sister;
 
 import java.util.ArrayList;
@@ -18,11 +19,11 @@ import java.util.ArrayList;
 public class MeetASisAdapter extends RecyclerView.Adapter<MeetASisViewHolder> implements View.OnClickListener{
 
     private LayoutInflater inflater;
-    private AppCompatActivity activity;
+    private BaseActivity activity;
     private OnSisterClicked listener;
     private ArrayList<Sister> sisters;
 
-    public MeetASisAdapter(AppCompatActivity activity, OnSisterClicked listener) {
+    public MeetASisAdapter(BaseActivity activity, OnSisterClicked listener) {
         this.activity = activity;
         this.listener = listener;
         inflater = activity.getLayoutInflater();

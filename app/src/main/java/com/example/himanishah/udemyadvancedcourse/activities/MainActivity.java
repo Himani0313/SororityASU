@@ -11,7 +11,7 @@ import com.example.himanishah.udemyadvancedcourse.views.MainActivityViewPagerAda
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.activity_main_viewPager)
     ViewPager mainViewPager;
