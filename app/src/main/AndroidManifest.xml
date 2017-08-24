@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".infrastructure.BeastApplication">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.BaseActivity"></activity>
+        <activity android:name=".activities.PracticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customDialogActivity"></activity>
     </application>
 
 </manifest>

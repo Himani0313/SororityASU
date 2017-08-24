@@ -25,7 +25,7 @@ public class InMemorySisterService extends BaseInMemory {
             response.sisters.add(new Sister(
                     i,
                     "Sister " + i,
-                    "Joined for this reason",
+                    "Sister " + i + "Joined for this reason",
                     "http://www.gravatar.com/avatar/" + i + "?d=identicon",
                     "Computer science",
                     "Spring 2013",

@@ -1,5 +1,6 @@
 package com.example.himanishah.udemyadvancedcourse.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.himanishah.udemyadvancedcourse.R;
 import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
+import com.example.himanishah.udemyadvancedcourse.activities.PracticeActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.Sister;
 import com.example.himanishah.udemyadvancedcourse.services.SisterServices;
 import com.example.himanishah.udemyadvancedcourse.views.MeetASisViews.MeetASisAdapter;
@@ -56,6 +58,8 @@ public class MeetASisFragment extends BaseFragment implements MeetASisAdapter.On
     @Override
     public void onSisterClicked(Sister sister) {
         Log.d(LOG_TAG,sister.getSisterName() + " was clicked");
+        Intent intent = PracticeActivity.newIntent(getActivity(),sister);
+        startActivity(intent);
 
     }
 //    private ArrayList<Sister> getSisters(ArrayList<Sister> sisters){

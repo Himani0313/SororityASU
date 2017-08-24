@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UdemyAdvancedCourse</string>
+    <string name="why_joined_header">Why joined?</string>
+    <string name="major_intro">Major: %1$s</string>
+    <string name="fun_fact_intro">Fun fact: %1$s</string>
+    <string name="crossed_sem_intro">Joined: %1$s</string>
+
 </resources>
