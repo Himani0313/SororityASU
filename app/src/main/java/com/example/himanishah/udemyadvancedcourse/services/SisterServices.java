@@ -9,10 +9,15 @@ import java.util.List;
  */
 
 public class SisterServices {
+
+    public SisterServices(){
+
+    }
     public static class SearchSisterRequest{
         public String fireBaseUrl;
 
         public SearchSisterRequest(String fireBaseUrl){
+
             this.fireBaseUrl = fireBaseUrl;
         }
 

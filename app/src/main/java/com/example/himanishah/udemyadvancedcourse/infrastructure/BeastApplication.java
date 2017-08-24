@@ -2,6 +2,7 @@ package com.example.himanishah.udemyadvancedcourse.infrastructure;
 
 import android.app.Application;
 
+import com.example.himanishah.udemyadvancedcourse.inmemory.Module;
 import com.squareup.otto.Bus;
 
 /**
@@ -13,6 +14,12 @@ public class BeastApplication extends Application {
 
     public BeastApplication(){
         bus = new Bus();
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Module.Register(this);
     }
 
     public Bus getBus() {

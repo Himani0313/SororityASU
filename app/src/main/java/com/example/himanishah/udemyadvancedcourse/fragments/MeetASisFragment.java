@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import com.example.himanishah.udemyadvancedcourse.R;
 import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.Sister;
+import com.example.himanishah.udemyadvancedcourse.services.SisterServices;
 import com.example.himanishah.udemyadvancedcourse.views.MeetASisViews.MeetASisAdapter;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,8 @@ public class MeetASisFragment extends BaseFragment implements MeetASisAdapter.On
         recyclerView = (RecyclerView) rootView.findViewById(R.id.fragment_meet_a_sis_recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),4));
         setUpAdapter();
-        getSisters(sisters);
+        bus.post(new SisterServices.SearchSisterRequest("Hellloo"));
+//        getSisters(sisters);
         return rootView;
     }
 
@@ -55,18 +58,23 @@ public class MeetASisFragment extends BaseFragment implements MeetASisAdapter.On
         Log.d(LOG_TAG,sister.getSisterName() + " was clicked");
 
     }
-    private ArrayList<Sister> getSisters(ArrayList<Sister> sisters){
-        for(int i=0; i<32;i++){
-            sisters.add(new Sister(
-                    i,
-                    "Sister " + i,
-                    "Joined for this reason",
-                    "http://www.gravatar.com/avatar/" + i + "?d=identicon",
-                    "Computer science",
-                    "Spring 2013",
-                    "I love to code my heart out"
-            ));
-        }
-        return sisters;
+//    private ArrayList<Sister> getSisters(ArrayList<Sister> sisters){
+//        for(int i=0; i<32;i++){
+//            sisters.add(new Sister(
+//                    i,
+//                    "Sister " + i,
+//                    "Joined for this reason",
+//                    "http://www.gravatar.com/avatar/" + i + "?d=identicon",
+//                    "Computer science",
+//                    "Spring 2013",
+//                    "I love to code my heart out"
+//            ));
+//        }
+//        return sisters;
+//    }
+    @Subscribe
+    public void getSisters(SisterServices.SearchSisterResponse response){
+        sisters.clear();
+        sisters.addAll(response.sisters);
     }
 }
