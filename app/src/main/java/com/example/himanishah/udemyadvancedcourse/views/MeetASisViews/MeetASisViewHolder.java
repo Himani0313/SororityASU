@@ -37,6 +37,7 @@ public class MeetASisViewHolder extends RecyclerView.ViewHolder {
                 .into(sisterPic, new Callback() {
                     @Override
                     public void onSuccess() {
+
                         sisterProgressBar.setVisibility(View.GONE);
                     }
 
