@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.BaseActivity"></activity>
-        <activity android:name=".activities.PracticeActivity"
+        <activity android:name=".activities.SisterPagerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/customDialogActivity"></activity>
     </application>

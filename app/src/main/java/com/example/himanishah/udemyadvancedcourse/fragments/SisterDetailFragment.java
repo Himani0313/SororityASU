@@ -46,16 +46,20 @@ public class SisterDetailFragment extends BaseFragment {
     ProgressBar progressBar;
 
     private Sister sister;
-    private final String BROTHER_EXTRA_INFO = "BROTHER_EXTRA_INFO";
+    public static final String BROTHER_EXTRA_INFO = "BROTHER_EXTRA_INFO";
 
-    public static SisterDetailFragment newInstance(){
-        return new SisterDetailFragment();
+    public static SisterDetailFragment newInstance(Sister sister){
+        Bundle arguments = new Bundle();
+        arguments.putParcelable(BROTHER_EXTRA_INFO, sister);
+        SisterDetailFragment sisterDetailFragment = new SisterDetailFragment();
+        sisterDetailFragment.setArguments(arguments);
+        return sisterDetailFragment;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sister = getActivity().getIntent().getParcelableExtra(BROTHER_EXTRA_INFO);
+        sister = getArguments().getParcelable(BROTHER_EXTRA_INFO);
     }
 
 

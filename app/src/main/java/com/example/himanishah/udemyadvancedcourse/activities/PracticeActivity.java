@@ -27,7 +27,7 @@ public class PracticeActivity extends BaseActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentById(R.id.activity_practice_fragment_container);
         if (fragment == null){
-            fragment = SisterDetailFragment.newInstance();
+            fragment = null;
             fragmentManager.beginTransaction()
                     .add(R.id.activity_practice_fragment_container,fragment)
                     .commit();
