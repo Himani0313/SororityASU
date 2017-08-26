@@ -9,5 +9,6 @@ import com.example.himanishah.udemyadvancedcourse.infrastructure.BeastApplicatio
 public class Module {
     public static void Register(BeastApplication application){
         new InMemorySisterService(application);
+        new InMemoryEventCardService(application);
     }
 }
