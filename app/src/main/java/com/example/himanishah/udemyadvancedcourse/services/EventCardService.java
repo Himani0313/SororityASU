@@ -9,6 +9,10 @@ import java.util.List;
  */
 
 public class EventCardService {
+
+    private EventCardService(){
+
+    }
     public static class SearchCommunityServiceCardRequest{
         public String fireBaseUrl;
 
