@@ -52,9 +52,6 @@ public class AboutUsAdapter extends RecyclerView.Adapter {
         socialEventCards = new ArrayList<>();
     }
 
-    public int getVIEW_TYPE_MAIN_HEADER() {
-        return VIEW_TYPE_MAIN_HEADER;
-    }
 
     public ArrayList<EventCard> getCommunityServiceEventCards() {
         return communityServiceEventCards;
@@ -65,6 +62,7 @@ public class AboutUsAdapter extends RecyclerView.Adapter {
     }
 
     public ArrayList<EventCard> getSocialEventCards() {
+
         return socialEventCards;
     }
 
@@ -232,11 +230,13 @@ public class AboutUsAdapter extends RecyclerView.Adapter {
                 return VIEW_TYPE_LIST_HEADER;
             }
             position--;
-            if(position<socialEventCards.size()){
-                return VIEW_TYPE_SOCIAL_LIST;
-            }
-            position -= socialEventCards.size();
+
         }
+        if(position<socialEventCards.size()){
+            return VIEW_TYPE_SOCIAL_LIST;
+        }
+        position -= socialEventCards.size();
+
         throw new IllegalArgumentException("We are being asked for a viewType for a position" + position +"although"+
         "we are at the end of the adapter supportviewholders. Please Check your adapter");
     }
