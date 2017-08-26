@@ -16,6 +16,8 @@ public class BeastApplication extends Application {
         bus = new Bus();
     }
 
+    public static final String YOUTUBE_KEY = "AIzaSyCWi3vjRDPnNSE-kJhuIhJfaFKEFsxIraI";
+
     @Override
     public void onCreate() {
         super.onCreate();

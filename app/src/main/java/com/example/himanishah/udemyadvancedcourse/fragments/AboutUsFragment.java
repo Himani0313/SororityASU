@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.himanishah.udemyadvancedcourse.R;
 import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
 import com.example.himanishah.udemyadvancedcourse.activities.PhotoPagerActivity;
+import com.example.himanishah.udemyadvancedcourse.activities.YoutubeActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.EventCard;
 import com.example.himanishah.udemyadvancedcourse.services.EventCardService;
 import com.example.himanishah.udemyadvancedcourse.views.AboutUsViews.AboutUsAdapter;
@@ -68,7 +69,8 @@ public class AboutUsFragment extends BaseFragment implements AboutUsAdapter.abou
             startActivity(intent);
         }
         else{
-            Log.d(AboutUsFragment.class.getSimpleName(), eventCard.getEventName() + "is a video");
+            Intent intent = YoutubeActivity.newIntent(getActivity(),eventCard);
+            startActivity(intent);
         }
     }
 
