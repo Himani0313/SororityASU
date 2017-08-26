@@ -23,6 +23,9 @@
         <activity android:name=".activities.SisterPagerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/customDialogActivity"></activity>
+        <activity android:name=".activities.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customDialogActivity"></activity>
     </application>
 
 </manifest>
