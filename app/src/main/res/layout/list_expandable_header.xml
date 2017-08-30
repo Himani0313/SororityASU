@@ -29,8 +29,6 @@
                 android:layout_height="20dp"
                 android:id="@+id/list_expandable_header_buttonToggle"
                 android:text="text"
-                android:textStyle="bold"
-                android:textSize="14sp"
                 android:layout_weight="0.25"/>
         </LinearLayout>
   </android.support.v7.widget.CardView>
