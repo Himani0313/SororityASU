@@ -23,6 +23,8 @@ public class RushExpandableHeaderHolder extends RecyclerView.ViewHolder{
     @BindView(R.id.list_expandable_header_layout)
     View backgroundView;
 
+    public Item refferalItem;
+
 
     public RushExpandableHeaderHolder(View itemView) {
         super(itemView);

@@ -1,5 +1,6 @@
 package com.example.himanishah.udemyadvancedcourse.views.RushViews;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.himanishah.udemyadvancedcourse.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -91,5 +93,14 @@ public class RushFooterHolder extends RecyclerView.ViewHolder {
         });
     }
 
-
+    public void populate(Context context){
+        Picasso.with(context).load("http://i50.photobucket.com/albums/f315/carlos6024/faceBookLogo_zps5ehpqnng.png")
+                .into(facebookImage);
+        Picasso.with(context).load("http://i50.photobucket.com/albums/f315/carlos6024/snapChat_logo_zpsjzwi8hpr.png")
+                .into(snapchatImage);
+        Picasso.with(context).load("http://i50.photobucket.com/albums/f315/carlos6024/insta_logo_zpshg6xmz7g.jpg")
+                .into(instagramImage);
+        Picasso.with(context).load("https://dl.dropboxusercontent.com/s/jbtx0tbvi2t3v67/twitter%20logo.jpg?dl=0")
+                .into(twitterImage);
+    }
 }
