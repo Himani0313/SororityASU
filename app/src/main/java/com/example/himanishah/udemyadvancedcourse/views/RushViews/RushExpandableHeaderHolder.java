@@ -25,7 +25,6 @@ public class RushExpandableHeaderHolder extends RecyclerView.ViewHolder{
 
     public Item refferalItem;
 
-
     public RushExpandableHeaderHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this,itemView);

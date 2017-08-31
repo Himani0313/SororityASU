@@ -11,5 +11,6 @@ public class Module {
         new InMemorySisterService(application);
         new InMemoryEventCardService(application);
         new InMememoryPicService(application);
+        new InMemoryRushEventService(application);
     }
 }
