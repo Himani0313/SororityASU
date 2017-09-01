@@ -29,6 +29,11 @@
         <activity android:name=".activities.YoutubeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/youtubeDialogActivity"></activity>
+        <activity android:name=".activities.ActivityMaps"
+            android:screenOrientation="portrait"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAb9wrBodbo7GmQUEN9r_9UrxWKXifXG6Q"/>
     </application>
 
 </manifest>

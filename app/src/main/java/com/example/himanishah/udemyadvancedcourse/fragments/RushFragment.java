@@ -1,5 +1,6 @@
 package com.example.himanishah.udemyadvancedcourse.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.himanishah.udemyadvancedcourse.R;
+import com.example.himanishah.udemyadvancedcourse.activities.ActivityMaps;
 import com.example.himanishah.udemyadvancedcourse.activities.BaseActivity;
 import com.example.himanishah.udemyadvancedcourse.entities.RushEvents;
 import com.example.himanishah.udemyadvancedcourse.services.RushEventsService;
@@ -70,7 +72,10 @@ public class RushFragment extends BaseFragment implements RushEventsAdapter.Rush
 
     @Override
     public void OnRushEventClicked(RushEvents rushEvents) {
-
+        if(!rushEvents.isOnCampus()){
+            Intent intent = ActivityMaps.newIntent(getActivity(),rushEvents);
+            startActivity(intent);
+        }
     }
 
     @Subscribe
